@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Link to project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://cerulean-kashata-8c9c89.netlify.app/
 
 ## Available Scripts
 
