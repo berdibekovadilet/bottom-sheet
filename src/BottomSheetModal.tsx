@@ -1,5 +1,5 @@
 import React, {useRef, useEffect, useState} from "react";
-import "./BottomSheetModal.css";
+import styles from "./BottomSheetModal.module.scss";
 
 interface BottomSheetModalProps {
     isOpen: boolean;
@@ -63,17 +63,17 @@ const BottomSheetModal: React.FC<BottomSheetModalProps> = ({
 
     return (
         <div
-            className="modal-overlay"
+            className={styles.modalOverlay}
             style={{opacity: progress, visibility: isVisible ? "visible" : "hidden"}}
             onMouseDown={handleClickOutside}
         >
             <div
                 ref={modalRef}
-                className="bottom-sheet"
+                className={styles.bottomSheet}
                 style={{transform: `translateY(${(1 - progress) * 100}%)`}}
                 onTouchMove={handleTouchMove}
             >
-                <button className="close-button" onClick={onClose}>
+                <button className={styles.closeButton} onClick={onClose}>
                     Закрыть
                 </button>
                 {children}

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import BottomSheetModal from "./BottomSheetModal";
+import styles from "./BottomSheetModal.module.scss"
 
 const App: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +15,12 @@ const App: React.FC = () => {
 
     return (
         <div>
-            <button onClick={openModal}>Открыть модальное окно</button>
+            <div className={styles.centerContainer}>
+                <button className={styles.openButton} onClick={openModal}>
+                    Открыть
+                </button>
+            </div>
+
             <BottomSheetModal isOpen={isModalOpen} onClose={closeModal}>
                 <h2>Заголовок модального окна</h2>
                 <p>Текст внутри модального окна</p>
