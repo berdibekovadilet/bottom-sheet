@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import BottomSheetModal from "./BottomSheetModal";
-import styles from "./BottomSheetModal.module.scss"
+import BottomSheetModal from "./variant2/BottomSheetModal";
+import styles from "./variant1/BottomSheetModal.module.scss"
 
 const App: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
